@@ -1,5 +1,33 @@
-template-file-path: cfn-template.yaml
-parameters:
-  MyRoleName: TestValue
-tags:
-  funKey: funValue
+AWSTemplateFormatVersion: '2010-09-09'
+
+Parameters:
+  MyRoleName:
+    Type: String
+
+Resources:
+  TestRole:
+    Type: AWS::IAM::Role
+    Properties:
+      Name: !Ref MyRoleName
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - ec2.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Path: /
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action: '*'
+                Resource: '*'
+
+Outputs:
+  RoleOutput:
+      Value: !Ref TestRole
