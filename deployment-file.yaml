@@ -3,3 +3,4 @@ parameters:
   MyRoleName: TestValue
 tags:
   funKey: funValue
+  test: testTag
