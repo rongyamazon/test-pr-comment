@@ -7,5 +7,5 @@ Resources:
     Type: AWS::CloudFormation::WaitConditionHandle
 
 Outputs:
-  MyOutput2:
+  MyOutput3:
     Value: !Ref MyRoleName
