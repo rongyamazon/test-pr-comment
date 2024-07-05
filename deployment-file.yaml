@@ -1,11 +1,5 @@
-Parameters:
-  MyRoleName:
-    Type: String
-
-Resources:
-  NullResource:
-    Type: AWS::CloudFormation::WaitConditionHandle
-
-Outputs:
-  MyOutput:
-    Value: !Ref MyRoleName
+template-file-path: cfn-template.yaml
+parameters:
+  MyRoleName: TestValue
+tags:
+  funKey: funValue
