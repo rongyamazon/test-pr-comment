@@ -1,0 +1,5 @@
+template-file-path: cfn-template.yaml
+parameters:
+  MyRoleName: TestValue
+tags:
+  funKey: funValue
