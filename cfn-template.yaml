@@ -3,8 +3,6 @@ Parameters:
     Type: String
 
 Resources:
-  NullResource:
-    Type: AWS::CloudFormation::WaitConditionHandle
   TestRole:
     Type: 'AWS::IAM::Role'
     Properties:
