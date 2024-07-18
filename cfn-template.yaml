@@ -28,5 +28,5 @@ Resources:
                 Resource: '*'
 
 Outputs:
-  test:
+  test2:
     Value: !Ref MyRoleName
